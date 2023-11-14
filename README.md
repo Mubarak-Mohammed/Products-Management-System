@@ -1,2 +1,2 @@
-# Store-Management-System
-Store Management system
+# Products-Management-System
+Products Management system
