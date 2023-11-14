@@ -1,0 +1,209 @@
+:root {
+    --background:#F1FCFD;
+    --mainColoer:#FFF8EA;
+    --darkTxetColoer:#000;
+    --lightTxetColoer:#000;
+    --inputColoer:#C7EEFF;
+    --hoverColor:#4D6DE3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--background);
+  color:var(--darkTxetColoer);
+}
+
+.app {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin: 15px;
+}
+
+.header-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-btn span {
+    color: var(--lightTxetColoer);
+    font-weight:bold;
+    font-size:35px;
+}
+
+.header-btn span::before{
+    content: 'Total Price: ';
+    color: var(--darkTxetColoer);
+}
+
+.header h2 {
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--darkTxetColoer)
+}
+
+.header p {
+   font-size: 25px;
+   margin-top: 18px;
+   color: var(--darkTxetColoer)
+
+}
+
+
+button {
+    outline: none;
+    border: none;
+    padding: 15px;
+    background-color: var(--inputColoer);
+    color: var(--lightTxetColoer);
+    font-size: medium;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--hoverColor);
+}
+
+button a {
+    color: var(--lightTxetColoer);
+    font-size: medium;
+    text-decoration: none;
+}
+.inputs {
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: #eee;
+    column-gap: 50px;
+    row-gap: 40px;
+}
+
+/* inpus style */
+
+.inputs input {
+    height: 56px;
+    border: none;
+    outline: none;
+    background-color:var(--inputColoer) ;
+    color: var(--mainColoer);
+    padding: 0 15px;
+}
+ 
+.inputs input:focus {
+    background-color: var(--hoverColor);
+}
+
+.inputs input::placeholder {
+    color: var(--lightTxetColoer);
+    font-size: medium;
+    opacity: 0.6;
+}
+
+button input {
+    border-radius: 6px;
+}
+
+
+/* output style  */
+
+.information {
+    margin-top: 40px;
+}
+
+.information .outputs .search {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.information .outputs .search .search-input {
+    width: 100%;
+    height: 56px;
+    border: none;
+    outline: none;
+    background-color:var(--inputColoer) ;
+    color: var(--mainColoer);
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.information .outputs .search .search-input::placeholder {
+    color: var(--lightTxetColoer);
+    font-size: medium;
+    opacity: 0.6;
+}
+
+.information .outputs .search .search-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+table th {
+    text-transform: capitalize;
+}
+
+table th,td{
+    padding: 8px;
+} 
+
+/* responsive  */
+@media only screen and (max-width: 375px) {
+   .app {
+     display: flex;
+     width: 80%;
+     flex-direction: column;
+     margin: auto;
+   }
+
+   .header {
+    width: 100%;
+   }
+   .header h2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--darkTxetColoer);
+}
+ .header p {
+    font-size: small;
+ }
+
+ button {
+    padding: 6px;
+    height: 40px;
+
+ }
+ button a {
+    font-size: 14px;
+
+ }
+
+ .header-btn span {
+    font-size: 18px;
+ }
+
+ .inputs input {
+    width: 119px;
+ }
+
+ .search-btn .search-title {
+    margin-right: 15px;
+ }
+}
